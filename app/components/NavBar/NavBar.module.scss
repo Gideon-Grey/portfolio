@@ -1,0 +1,230 @@
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 60%;
+  padding: 0 20px;
+  z-index: 1000;
+
+  @media (max-width: 768px) {
+    max-width: 95%;
+    top: 10px;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 12px 32px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
+  border-radius: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px 20px;
+    gap: 20px;
+  }
+}
+
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+
+  &::after {
+    content: ".";
+    color: #c8860a;
+    position: absolute;
+    right: -10px;
+    top: 0;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.link {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #c8860a;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: rgba(255, 255, 255, 0.7);
+
+    &:hover {
+      color: #c8860a;
+    }
+  }
+}
+
+.burgerBtn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #c8860a;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: #fff;
+
+    &:hover {
+      color: #c8860a;
+    }
+  }
+}
+
+.burgerIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.mobileMenu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  width: 95%;
+  max-height: 0;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+
+  @media (prefers-color-scheme: dark) {
+    background: rgba(0, 0, 0, 0.6);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  }
+
+  &.mobileMenuOpen {
+    max-height: 400px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.mobileLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 20px 0;
+  width: 100%;
+
+  li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+    @media (prefers-color-scheme: dark) {
+      border-bottom-color: rgba(255, 255, 255, 0.05);
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.mobileLink {
+  display: block;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: #c8860a;
+    background: rgba(200, 134, 10, 0.1);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: rgba(255, 255, 255, 0.9);
+
+    &:hover {
+      color: #c8860a;
+      background: rgba(200, 134, 10, 0.15);
+    }
+  }
+}

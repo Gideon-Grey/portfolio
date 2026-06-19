@@ -1,0 +1,240 @@
+.about {
+  padding: 80px 20px;
+  background: transparent;
+  position: relative;
+
+  @media (prefers-color-scheme: dark) {
+    background: transparent;
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 20px;
+  }
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #000;
+  margin: 0 0 30px 0;
+  position: relative;
+  display: inline-block;
+
+  @media (prefers-color-scheme: dark) {
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 28px;
+  }
+}
+
+.highlight {
+  color: #c8860a;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+
+  strong {
+    color: #c8860a;
+    font-weight: 600;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: #aaa;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 15px;
+  }
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 600px;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    max-width: 100%;
+  }
+}
+
+.statItem {
+  background: #f5f5f0;
+  padding: 30px 20px;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+    border-color: rgba(200, 134, 10, 0.2);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.05);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(200, 134, 10, 0.3);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 24px 16px;
+  }
+}
+
+.statValue {
+  display: block;
+  font-size: 36px;
+  font-weight: 700;
+  color: #c8860a;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 24px;
+  }
+}
+
+.statLabel {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #666;
+  text-transform: uppercase;
+
+  @media (prefers-color-scheme: dark) {
+    color: #888;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+}
+
+.skillsSection {
+  margin-top: 20px;
+}
+
+.skillsTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 25px 0;
+  letter-spacing: 1px;
+
+  @media (prefers-color-scheme: dark) {
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.skillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 900px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    gap: 10px;
+    max-width: 100%;
+  }
+}
+
+.skillTag {
+  padding: 10px 24px;
+  background: #f5f5f0;
+  color: #333;
+  border-radius: 40px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  cursor: default;
+
+  &:hover {
+    background: #c8860a;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(200, 134, 10, 0.25);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background: rgba(255, 255, 255, 0.06);
+    color: #ccc;
+
+    &:hover {
+      background: #c8860a;
+      color: #fff;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+}
