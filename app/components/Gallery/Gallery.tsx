@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styles from "./Gallery.module.scss";
 
 const projects = [
@@ -40,6 +40,9 @@ const projects = [
 export default function Gallery() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [touchStartX, setTouchStartX] = useState(0);
+  const [touchEndX, setTouchEndX] = useState(0);
+  const carouselRef = useRef<HTMLDivElement>(null);
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % projects.length);
@@ -53,6 +56,26 @@ export default function Gallery() {
     setCurrentIndex(index);
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartX(e.targetTouches[0].clientX);
+    setTouchEndX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEndX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    const swipeDistance = touchStartX - touchEndX;
+    const minSwipeDistance = 50;
+
+    if (swipeDistance > minSwipeDistance) {
+      nextSlide();
+    } else if (swipeDistance < -minSwipeDistance) {
+      prevSlide();
+    }
+  };
+
   return (
     <section id="gallery" className={styles.gallery}>
       <div className={styles.container}>
@@ -62,9 +85,13 @@ export default function Gallery() {
         <p className={styles.subtitle}>A showcase of my latest projects</p>
 
         <div
+          ref={carouselRef}
           className={styles.carousel}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           <div className={styles.slideWrapper}>
             <div
