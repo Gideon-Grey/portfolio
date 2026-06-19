@@ -51,13 +51,13 @@
 
 .subtitle {
   font-size: 18px;
-  color: #666;
+  color: rgba(255, 255, 255, 0.6);
   margin: 20px 0 50px 0;
   font-weight: 300;
   letter-spacing: 1px;
 
   @media (prefers-color-scheme: dark) {
-    color: #888;
+    color: rgba(255, 255, 255, 0.6);
   }
 
   @media (max-width: 768px) {
@@ -73,19 +73,18 @@
 .contactCard {
   max-width: 600px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 24px;
   padding: 40px 48px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
-  opacity: 75%;
 
   &:hover {
-    opacity: 1;
-    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.08);
-    border-color: rgba(200, 134, 10, 0.15);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+    border-color: rgba(200, 134, 10, 0.3);
   }
 
   @media (prefers-color-scheme: dark) {
@@ -101,13 +100,17 @@
   }
 
   @media (max-width: 768px) {
-    background: rgba(255, 255, 255, 0.7);
     padding: 30px 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   }
 
   @media (max-width: 480px) {
-    background: rgba(255, 255, 255, 0.7);
     padding: 24px 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -116,7 +119,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 24px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 
   &:last-child {
     border-bottom: none;
@@ -138,13 +141,13 @@
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #999;
+  color: rgba(255, 255, 255, 0.4);
   text-transform: uppercase;
   min-width: 100px;
   text-align: left;
 
   @media (prefers-color-scheme: dark) {
-    color: #666;
+    color: rgba(255, 255, 255, 0.4);
   }
 
   @media (max-width: 480px) {
@@ -156,7 +159,7 @@
 .contactValue {
   font-size: 16px;
   font-weight: 500;
-  color: #000;
+  color: #fff;
   text-decoration: none;
   transition: color 0.2s ease;
   text-align: right;
