@@ -27,7 +27,7 @@
   font-size: 48px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #000;
+  color: #fff;
   margin: 0 0 10px 0;
   position: relative;
   display: inline-block;
@@ -51,13 +51,13 @@
 
 .subtitle {
   font-size: 18px;
-  color: #666;
+  color: rgba(255, 255, 255, 0.6);
   margin: 20px 0 50px 0;
   font-weight: 300;
   letter-spacing: 1px;
 
   @media (prefers-color-scheme: dark) {
-    color: #888;
+    color: rgba(255, 255, 255, 0.6);
   }
 
   @media (max-width: 768px) {
@@ -89,21 +89,22 @@
 }
 
 .projectCard {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.06);
   border-radius: 24px;
   padding: 32px 28px;
   text-align: left;
   transition: all 0.3s ease;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   height: 100%;
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.08);
-    border-color: rgba(200, 134, 10, 0.15);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+    border-color: rgba(200, 134, 10, 0.3);
+    background: rgba(255, 255, 255, 0.1);
   }
 
   @media (prefers-color-scheme: dark) {
@@ -112,7 +113,7 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 
     &:hover {
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.1);
       border-color: rgba(200, 134, 10, 0.3);
       box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
     }
@@ -120,10 +121,14 @@
 
   @media (max-width: 768px) {
     padding: 28px 24px;
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.06);
   }
 
   @media (max-width: 480px) {
     padding: 24px 18px;
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.06);
   }
 }
 
@@ -134,7 +139,7 @@
 .projectTitle {
   font-size: 24px;
   font-weight: 700;
-  color: #000;
+  color: #fff;
   margin: 0 0 4px 0;
   letter-spacing: 0.5px;
 
@@ -170,12 +175,12 @@
 .projectDetails {
   font-size: 15px;
   line-height: 1.6;
-  color: #444;
+  color: rgba(255, 255, 255, 0.8);
   margin: 0 0 20px 0;
   flex: 1;
 
   @media (prefers-color-scheme: dark) {
-    color: #aaa;
+    color: rgba(255, 255, 255, 0.8);
   }
 
   @media (max-width: 768px) {
@@ -197,37 +202,45 @@
 
 .techTag {
   padding: 5px 14px;
-  background: #f5f5f0;
-  color: #333;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ccc;
   border-radius: 20px;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.3px;
   transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.06);
 
   &:hover {
     background: #c8860a;
     color: #fff;
     transform: translateY(-2px);
+    border-color: #c8860a;
   }
 
   @media (prefers-color-scheme: dark) {
     background: rgba(255, 255, 255, 0.08);
     color: #ccc;
+    border-color: rgba(255, 255, 255, 0.06);
 
     &:hover {
       background: #c8860a;
       color: #fff;
+      border-color: #c8860a;
     }
   }
 
   @media (max-width: 768px) {
     font-size: 11px;
     padding: 4px 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.06);
   }
 
   @media (max-width: 480px) {
     font-size: 10px;
     padding: 3px 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.06);
   }
 }
