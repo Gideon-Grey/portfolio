@@ -21,17 +21,17 @@ export default function Contact() {
           </div>
           <div className={styles.contactRow}>
             <span className={styles.contactLabel}>LOCATION</span>
-            <span className={styles.contactValue}>Russia</span>
+            <span className={styles.contactValue}>Astana/Kazakhstan</span>
           </div>
           <div className={styles.contactRow}>
             <span className={styles.contactLabel}>LINKEDIN</span>
             <a 
-              href="https://linkedin.com/in/noname" 
+              href="https://www.linkedin.com/in/dmitry-kochiev-7a5286401/" 
               target="_blank" 
               rel="noopener noreferrer"
               className={styles.contactValue}
             >
-              linkedin.com/in/noname
+              linkedin.com/in/dmitry-kochiev
             </a>
           </div>
           <div className={styles.contactRow}>
